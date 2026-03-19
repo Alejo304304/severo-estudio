@@ -25,10 +25,33 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: "forma-djr-display", sans-serif;
-  font-weight: 700;
+h1 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 50px;
+   font-weight: 700;
 }
+
+h2 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 25px;
+   font-weight: 500;
+   letter-spacing: 2px;
+
+}
+
+h3 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 40px;
+   font-weight: 700;   
+   
+}
+
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
 
 * {
   margin: 0;
@@ -48,6 +71,16 @@ body {
   padding: 40px 20px;
 }
 
+
+.divider {
+  width: 90%;
+  max-width: 1200px;
+  height: 2px;
+  background-color: #000;
+  margin: 20px auto;
+}
+
+
 /* NAV */
 .nav {
   background: #0b0014;
@@ -61,7 +94,7 @@ body {
 }
 
 .logo img {
-  height: 50px;
+  height: 55px;
   width: auto;
   display: block;
   margin-top: -30px;
@@ -152,13 +185,13 @@ body {
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
-  gap: 10px;  
+  gap: 150px;  
 }
 
 .hero-tags span {
-  border: 1px solid white;
+  border: 5px solid white;
   padding: 6px 16px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1px;
   color: white;
   border-radius: 20px;
@@ -235,9 +268,9 @@ body {
 
 
 /* ABOUT */
+
 .about h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .about h4 {
@@ -245,7 +278,7 @@ body {
 }
 
 .about p {
-  max-width: 700px;
+  max-width: 90%;
   margin-bottom: 30px;
 }
 
@@ -261,24 +294,27 @@ body {
 }
 
 /* SERVICES */
-.services h2 {
-  text-align: center;
-}
 
 .subtitle {
-  text-align: center;
-  margin-bottom: 40px;
+   margin-bottom: 20px;
 }
 
+.numero {    
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 35px;
+    font-weight: 50;
+
+}
 .services-grid {
+    margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .card {
+    padding: 50px;
   background: #eee;
-  padding: 20px;
   border-radius: 10px;
 }
 
@@ -287,6 +323,21 @@ body {
   color: white;
 }
 
+.card.active .estrella {
+  float:  right;
+  width: 70px;
+  pointer-events: none;
+}
+
+.flecha {
+    float:  right;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.services-grid p {
+    width: 75%;
+}
 /* PROJECTS */
 .project-main img {
   width: 100%;
