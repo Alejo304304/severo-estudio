@@ -14,35 +14,46 @@
 <!-- NAV -->
 <header class="nav">
   <div class="container nav-content">
-    <div class="logo">severoestudio</div>
+    <div class="logo"><a href="index.html"><img src="assets/logobarra.svg" alt=""></a></div>
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Proyectos</a>
-      <a href="#">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="proyectos.html">Proyectos</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="hero container">
-  <div class="hero-img">
-    <img src="assets/no_photo.png" alt="">
-  </div>
-  <div class="hero-text">
-    <h1>
-      NO ERES DE LOS QUE SE<br>
-      CONFORMAN CON LO COMÚN,<br>
-      Y NOSOTROS TAMPOCO
-    </h1>
+<section class="hero-slider">
 
-    <div class="hero-tags">
-      <span>Identidad</span>
-      <span>Asesoría</span>
-      <span>Interfaces</span>
-      <span>Registro</span>
-    </div>
+  <div class="slides">
+    <img src="assets/no_photo.png" class="slide active">
+    <img src="assets/no_photo.png" class="slide">
+    <img src="assets/no_photo.png" class="slide">
   </div>
+
+  <div class="hero-overlay">
+  <h1 class="hero-title">
+    NO ERES DE LOS QUE SE CONFORMAN CON LO COMÚN, Y NOSOTROS TAMPOCO
+  </h1>
+</div>
+
+<div class="hero-tags">
+  <span>IDENTIDAD</span>
+  <span>ASESORÍA</span>
+  <span>INTERFACES</span>
+  <span>REGISTRO</span>
+</div>
+
 </section>
+
+
+
+
+
+
+
+
 
 <!-- ABOUT -->
 <section class="about container">
@@ -141,6 +152,23 @@
     </div>
   </div>
 </footer>
+
+
+
+<!-- JAVA SCRIPT -->
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 4000);
+</script>
+
+<!----------------------------->
 
 </body>
 </html>
