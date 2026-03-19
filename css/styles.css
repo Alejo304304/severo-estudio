@@ -25,17 +25,61 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
+/* LIGHTBOX ZOOM IMAGEN*/
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 20px;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  
+}
+
+/* IMPORTANTE */
+.zoom-img {
+  cursor: pointer;
+}
+
+
+/*-----------*/
+
+
 h1 {
     font-family: "forma-djr-display", sans-serif;
     font-size: 50px;
    font-weight: 700;
+   text-align: center;
 }
 
 h2 {
     font-family: "forma-djr-display", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
    font-weight: 500;
    letter-spacing: 2px;
+   line-height: 1.0;
+   text-align: center;
 
 }
 
@@ -43,6 +87,18 @@ h3 {
     font-family: "forma-djr-display", sans-serif;
     font-size: 40px;
    font-weight: 700;   
+   line-height: 1.0;
+   margin-bottom: 10px;
+   
+}
+
+h4 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 25px;
+   font-weight: 700;   
+   line-height: 1.0;
+   margin-top: 10px;
+   margin-bottom: 10px;
    
 }
 
@@ -107,6 +163,7 @@ body {
 }
 
 /* HERO SLIDER */
+
 .hero-slider {
   position: relative;
   width: 100%;
@@ -137,6 +194,7 @@ body {
 }
 
 /* OSCURECER FONDO */
+
 .hero-slider::after {
   content: "";
   position: absolute;
@@ -178,6 +236,7 @@ body {
 }
 
 /* TAGS ABAJO CENTRADOS */
+
 .hero-tags {
   position: absolute;
   bottom: 30px;
@@ -185,16 +244,18 @@ body {
   transform: translateX(-50%);
   z-index: 2;
   display: flex;
-  gap: 150px;  
+  gap: 150px;
 }
 
-.hero-tags span {
-  border: 5px solid white;
-  padding: 6px 16px;
-  font-size: 12px;
-  letter-spacing: 1px;
+.hero-tags span {  
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 600; 
+  padding: 4px 14px;
+  font-size: 15px;
+  letter-spacing: 2px;
   color: white;
   border-radius: 20px;
+  border: 2px solid white;
 }
 
 /* IMÁGENES */
@@ -255,12 +316,7 @@ body {
   margin-top: 20px;
 }
 
-.hero-tags span {
-  border: 1px solid white;
-  padding: 6px 14px;
-  margin: 5px;
-  font-size: 12px;
-}
+
 
 
 
@@ -269,8 +325,13 @@ body {
 
 /* ABOUT */
 
+.about h1 {
+    text-align: left;
+}
+
 .about h2 {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .about h4 {
@@ -338,7 +399,24 @@ body {
 .services-grid p {
     width: 75%;
 }
+
+
+
 /* PROJECTS */
+
+.project-main span {
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 600; 
+  padding: 4px 14px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+  float: right;
+  margin-right: 20px;
+}
+
 .project-main img {
   width: 100%;
   border-radius: 10px;
@@ -357,9 +435,53 @@ body {
 
 .project-grid img {
   width: 100%;
+  border-radius: 20px;
+}
+ .project-main, .project-min, .project-gran {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-color: #ECECEC;
+  padding-bottom: 20px;
+ }
+.project-main h3 {
+  margin-left: 20px;
+
 }
 
+.project-grid h4 {
+  margin-left: 20px;
+
+}
+
+.project-main p {
+  margin-left: 20px;
+
+}
+
+.project-grid span {
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 600; 
+  padding: 4px 14px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+
+
+
 /* CONTACT */
+
+a {
+  text-decoration: none;
+}
+
 .contact {
   text-align: center;
 }
@@ -368,12 +490,35 @@ body {
   display: block;
   background: linear-gradient(135deg, #8a2be2, #c084fc);
   color: white;
-  padding: 15px;
-  margin: 15px auto;
-  max-width: 400px;
+  padding: 20px;
+  margin: 12px auto;
+  max-width: 60%;
   border-radius: 30px;
   text-decoration: none;
 }
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.btn-container a {
+  text-align: left;
+}
+
+.btn span {
+  font-family: "forma-djr-display", sans-serif;
+    font-size: 20px;
+   font-weight: 600;   
+   line-height: 1.0;   
+   margin-left: 25px;
+   letter-spacing: 1px;
+}
+
+.btn img {
+    height: 20px;
+    margin-right: 5px;
+}
+
 
 /* FOOTER */
 .footer {
@@ -382,10 +527,25 @@ body {
   padding: 20px;
 }
 
+.footer img {
+  width: 15%;
+}
+
+.footer a {
+    color: white;
+  font-family: "forma-djr-display", sans-serif;
+  font-size: 20px; 
+   font-weight: 400;   
+   line-height: 1.0; 
+   letter-spacing: 1px;
+   margin-left: 15px;
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

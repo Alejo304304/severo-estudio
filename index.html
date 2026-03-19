@@ -61,9 +61,9 @@
 </div>
 
   <div class="about-gallery">
-    <img src="assets/no_photo.png">
-    <img src="assets/no_photo.png">
-    <img src="assets/no_photo.png">
+    <img src="assets/no_photo.png" class="zoom-img">
+    <img src="assets/no_photo.png" class="zoom-img">
+    <img src="assets/no_photo.png" class="zoom-img">
   </div>
 </section>
 <div class="divider"></div>
@@ -123,39 +123,65 @@
   <div class="project-main">
     <img src="assets/no_photo.png">
     <div class="project-info">
+      <span>IDENTIDAD</span>
+      <span>ASESORIA</span>
       <h3>NOMBRE</h3>
       <p>Descripción corta del proyecto. Descripción corta del proyecto.</p>
+      
     </div>
   </div>
 
   <div class="project-grid">
-    <div>
+    <div class="project-min">
       <img src="assets/no_photo.png">
-      <p>SUPER NOMBRE</p>
+      <span>IDENTIDAD</span>
+      <h4>SUPER NOMBRE</h4>
     </div>
-    <div>
+    <div class="project-gran">
       <img src="assets/no_photo.png">
-      <p>SUPER NOMBRE</p>
+      <span>IDENTIDAD</span>
+      <h4>SUPER NOMBRE</h4>
     </div>
   </div>
 </section>
 <div class="divider"></div>
 
-<!-- CONTACTO -->
-<section class="contact container">
-  <h2>¡HABLEMOS DE TU PROYECTO!</h2>
-  <p>AQUÍ NO SE TRATA SOLO DE CREAR, SE TRATA DE CONECTAR</p>
 
-  <a href="#" class="btn">severoestudio@gmail.com</a>
-  <a href="#" class="btn">Whatsapp +57 318 0337796</a>
+<!-- CONTACTO -->
+
+<section class="contact container">
+  <h1>¡HABLEMOS DE TU PROYECTO!</h1>
+  <h2>AQUÍ NO SE TRATA SOLO DE CREAR, SE TRATA DE CONECTAR</h2>
+
+<div class="btn-container">
+<a href="#" >
+  <div class="btn">
+    <span>severoestudio@gmail.com</span>  
+    <div class="flecha">
+        <img src="assets/flecha_b.svg" alt="">
+      </div>
+  </div>
+</a>
+
+<a href="#" >
+  <div class="btn">
+    <span>Whatsapp +57 318 033 7796</span>  
+    <div class="flecha">
+        <img src="assets/flecha_b.svg" alt="">
+      </div>
+  </div>
+</a>
+</div>
+  
+  
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-content">
-    <span>severoestudio</span>
+    <img src="assets/logobarra.svg" alt="">
     <div>
-      <a href="#">Proyectos</a>
+      <a href="proyectos.html">Proyectos</a>
       <a href="#">Instagram</a>
     </div>
   </div>
@@ -173,10 +199,45 @@
     slides[index].classList.remove("active");
     index = (index + 1) % slides.length;
     slides[index].classList.add("active");
-  }, 4000);
+  }, 4000);  
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = document.querySelectorAll(".zoom-img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("closeBtn");
+
+  images.forEach(img => {
+    img.addEventListener("click", function () {
+      lightbox.style.display = "flex";
+      lightboxImg.src = this.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", function (e) {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+
+});
 </script>
 
 <!----------------------------->
+
+
+<div id="lightbox" class="lightbox">
+  <span id="closeBtn">&times;</span>
+  <img id="lightbox-img">
+</div>
+
 
 </body>
 </html>
