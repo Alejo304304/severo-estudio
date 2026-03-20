@@ -1154,14 +1154,26 @@ a {
 
 /* INTRO */
 .service-header {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 40px;
   align-items: start;
 }
 
 .service-info {
-  text-align: left;
+  flex: 1;
+}
+
+.service-image {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
 .service-info h1, .service-about h1, .service-includes h1 {
@@ -1233,7 +1245,22 @@ a {
 
 }
 
+@media (max-width: 768px) {
+  .service-header {
+    flex-direction: column-reverse; /* 👈 imagen arriba en móvil */
+  }
 
+  .service-image img {
+    height: 250px;
+  }
+
+  .includes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+}
 
 
 
