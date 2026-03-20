@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Severo Estudio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lbv3hex.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-content">
+    <div class="logo"><a href="index.html"><img src="assets/logobarra.svg" alt=""></a></div>
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="proyectos.html">PROYECTOS</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-slider">
+
+  <div class="slides">
+    <img src="assets/no_photo.png" class="slide active">
+    <img src="assets/no_photo.png" class="slide">
+    <img src="assets/no_photo.png" class="slide">
+  </div>
+
+  <div class="hero-overlay">
+  <h1 class="hero-title">
+    QUEREMOS QUE TU<br>MARCA SEA INOLVIDABLE
+  </h1>
+</div>
+
+<div class="hero-tags">
+  <span>IDENTIDAD</span>
+  <span>ASESORÍA</span>
+  <span>INTERFACES</span>
+  <span>REGISTRO</span>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- CONTACTO -->
+
+<section class="contact container">
+  <h1>¡HABLEMOS DE TU PROYECTO!</h1>
+  <h2>AQUÍ NO SE TRATA SOLO DE CREAR, SE TRATA DE CONECTAR</h2>
+
+<div class="btn-container">
+<a href="#" >
+  <div class="btn">
+    <span>severoestudio@gmail.com</span>  
+    <div class="flecha">
+        <img src="assets/flecha_b.svg" alt="">
+      </div>
+  </div>
+</a>
+
+<a href="#" >
+  <div class="btn">
+    <span>Whatsapp +57 318 033 7796</span>  
+    <div class="flecha">
+        <img src="assets/flecha_b.svg" alt="">
+      </div>
+  </div>
+</a>
+</div>
+  
+  
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-content">
+    <img src="assets/logofooter.svg" alt="">
+    <div class="enlace-contanainer">
+      <a href="proyectos.html">PROYECTOS</a>
+      <a href="#">INSTAGRAM</a>
+    </div>
+    
+  </div>
+  <div class="divider-footer"></div>
+  <span class="footer-copy">Severo Estudio - copyright 2026</span>
+</footer>
+
+
+
+<!-- JAVA SCRIPT -->
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 4000);  
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = document.querySelectorAll(".zoom-img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("closeBtn");
+
+  images.forEach(img => {
+    img.addEventListener("click", function () {
+      lightbox.style.display = "flex";
+      lightboxImg.src = this.src;
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", function (e) {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+
+});
+</script>
+
+<!----------------------------->
+
+
+<div id="lightbox" class="lightbox">
+  <span id="closeBtn">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+
+</body>
+</html>

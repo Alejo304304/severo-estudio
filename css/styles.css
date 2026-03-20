@@ -137,10 +137,10 @@ body {
 }
 
 
-/* NAV */
+/* NAV BASE */
 .nav {
+  position: relative;
   background: #0b0014;
-  color: white;
 }
 
 .nav-content {
@@ -149,18 +149,62 @@ body {
   align-items: center;
 }
 
+/* LOGO */
 .logo img {
-  height: 55px;
-  width: auto;
+  height: 40px;
   display: block;
-  margin-top: -30px;
+}
+
+/* LINKS */
+nav {
+  display: flex;
+  gap: 30px;
 }
 
 .nav a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
+  font-size: 14px;
 }
+
+/* BOTÓN */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0b0014;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+}
+
+
+
+
 
 /* HERO SLIDER */
 
@@ -534,7 +578,7 @@ a {
 .footer a {
     color: white;
   font-family: "forma-djr-display", sans-serif;
-  font-size: 20px; 
+  font-size: 15px; 
    font-weight: 400;   
    line-height: 1.0; 
    letter-spacing: 1px;
@@ -545,6 +589,31 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.enlace-contanainer {
+  padding-top: 15px;
+}
+
+.divider-footer {
+  width: 90%;
+  max-width: 1200px;
+  height: 1px;
+  background-color: white;
+  margin: 20px auto;
+}
+
+.footer-copy {
+  color: white;
+  font-family: "forma-djr-display", sans-serif;
+  font-size: 12px; 
+  font-weight: 400;
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+
 
 
 /* RESPONSIVE */
@@ -565,3 +634,78 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+
+
+
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  h1 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 40px;
+   font-weight: 700;
+   text-align: center;
+   line-height: 1.0;
+  }
+
+h2 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 20px;
+   font-weight: 500;
+   letter-spacing: 2px;
+   line-height: 1.0;
+   text-align: center;
+
+}
+
+h3 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 40px;
+   font-weight: 700;   
+   line-height: 1.0;
+   margin-bottom: 10px;
+   
+}
+
+h4 {
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 25px;
+   font-weight: 700;   
+   line-height: 1.0;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   
+}
+
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+
+
+  .hero-title {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  .hero-overlay {
+    padding: 30px;
+  }
+
+  .hero-slider {
+    height: 70vh;
+  }
+
+
+
+}
+
+/* PROYECTOS */

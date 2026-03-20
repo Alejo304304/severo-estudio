@@ -14,14 +14,25 @@
 <!-- NAV -->
 <header class="nav">
   <div class="container nav-content">
-    <div class="logo"><a href="index.html"><img src="assets/logobarra.svg" alt=""></a></div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="proyectos.html">Proyectos</a>
-      <a href="contacto.html">Contacto</a>
+    
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logobarra.svg" alt="">
+      </a>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="menu">
+      <a href="index.html">INICIO</a>
+      <a href="proyectos.html">PROYECTOS</a>
+      <a href="contacto.html">CONTACTO</a>
     </nav>
+
   </div>
 </header>
+
+
 
 <!-- HERO -->
 <section class="hero-slider">
@@ -179,17 +190,39 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container footer-content">
-    <img src="assets/logobarra.svg" alt="">
-    <div>
-      <a href="proyectos.html">Proyectos</a>
-      <a href="#">Instagram</a>
+    <img src="assets/logofooter.svg" alt="">
+    <div class="enlace-contanainer">
+      <a href="proyectos.html">PROYECTOS</a>
+      <a href="#">INSTAGRAM</a>
     </div>
+    
   </div>
+  <div class="divider-footer"></div>
+  <span class="footer-copy">Severo Estudio - copyright 2026</span>
 </footer>
 
 
 
 <!-- JAVA SCRIPT -->
+
+<!-- nav -->
+
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", function () {
+  menu.classList.toggle("active");
+});
+</script>
+
+
+<!-- - -->
+
+
+
+
+
 
 <script>
   const slides = document.querySelectorAll(".slide");
