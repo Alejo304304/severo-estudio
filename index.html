@@ -14,20 +14,27 @@
 <!-- NAV -->
 <header class="nav">
   <div class="container nav-content">
-    
+
     <div class="logo">
       <a href="index.html">
-        <img src="assets/logobarra.svg" alt="">
+        <img src="assets/logobarra.svg" alt="logo">
       </a>
     </div>
 
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <input type="checkbox" id="menu-toggle">
 
-    <nav id="menu">
-      <a href="index.html">INICIO</a>
-      <a href="proyectos.html">PROYECTOS</a>
-      <a href="contacto.html">CONTACTO</a>
-    </nav>
+    <label for="menu-toggle" class="menu-icon">
+      <img src="assets/menu.svg" alt="menu">
+    </label>
+
+    <!-- 🔥 WRAPPER -->
+    <div class="menu-wrapper">
+      <nav class="menu">
+        <a href="index.html">INICIO</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+    </div>
 
   </div>
 </header>
@@ -205,24 +212,7 @@
 
 <!-- JAVA SCRIPT -->
 
-<!-- nav -->
-
-<script>
-const toggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
-
-toggle.addEventListener("click", function () {
-  menu.classList.toggle("active");
-});
-</script>
-
-
 <!-- - -->
-
-
-
-
-
 
 <script>
   const slides = document.querySelectorAll(".slide");
