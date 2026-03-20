@@ -14,45 +14,109 @@
 <!-- NAV -->
 <header class="nav">
   <div class="container nav-content">
-    <div class="logo"><a href="index.html"><img src="assets/logobarra.svg" alt=""></a></div>
-    <nav>
-      <a href="index.html">INICIO</a>
-      <a href="proyectos.html">PROYECTOS</a>
-      <a href="contacto.html">CONTACTO</a>
-    </nav>
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logobarra.svg" alt="logo">
+      </a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-icon">
+      <img src="assets/menu.svg" alt="menu">
+    </label>
+
+    <!-- 🔥 WRAPPER -->
+    <div class="menu-wrapper">
+      <nav class="menu">
+        <a href="index.html">INICIO</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+    </div>
+
   </div>
 </header>
-
 <!-- HERO -->
 <section class="hero-slider">
-
-  <div class="slides">
-    <img src="assets/no_photo.png" class="slide active">
-    <img src="assets/no_photo.png" class="slide">
-    <img src="assets/no_photo.png" class="slide">
-  </div>
+  <a href="proyectos.html">
+    <div class="slides">    
+      <img src="assets/no_photo.png" class="slide active">
+      <img src="assets/no_photo.png" class="slide">
+      <img src="assets/no_photo.png" class="slide">  
+    </div>
+  </a>
 
   <div class="hero-overlay">
   <h1 class="hero-title">
-    QUEREMOS QUE TU<br>MARCA SEA INOLVIDABLE
+    NO ERES DE LOS QUE SECONFORMAN CON LO COMÚN, Y NOSOTROS TAMPOCO
   </h1>
 </div>
 
 <div class="hero-tags">
-  <span>IDENTIDAD</span>
-  <span>ASESORÍA</span>
-  <span>INTERFACES</span>
-  <span>REGISTRO</span>
+  <a href="proyectos.html"><span>IDENTIDAD</span></a>
+  <a href="proyectos.html"><span>ASESORÍA</span></a>
+  <a href="proyectos.html"><span>INTERFACES</span></a>
+  <a href="proyectos.html"><span>REGISTRO</span></a>
 </div>
 </section>
 
 
+<!-- PROYECTOS -->
+<section class="projects container">
+  <h1>NUESTROS PROYECTOS</h1>
+  <h2 class="subtitle">FALTA TEXTO POR DEFINIR</h2>
 
+  <div class="project-grid">
+    
+    <a href="">
+      <div class="project-gran">
+        <img src="assets/no_photo.png">
+        <span>IDENTIDAD</span>
+        <h4>SUPER NOMBRE</h4>
+      </div>
+    </a>
 
+    <a href="">
+      <div class="project-min">
+        <img src="assets/no_photo.png">
+        <span>IDENTIDAD</span>
+        <h4>SUPER NOMBRE</h4>
+      </div>
+    </a>    
 
+  </div>
 
+  <a href="">
+      <div class="project-baner">
+        <img src="assets/no_photo.png">
+        <span>IDENTIDAD</span>
+        <h4>SUPER NOMBRE</h4>
+      </div>
+    </a>
 
+    <div class="project-grid-2">        
+    <a href="">
+      <div class="project-min">
+        <img src="assets/no_photo.png">
+        <span>IDENTIDAD</span>
+        <h4>SUPER NOMBRE</h4>
+      </div>
+    </a>   
+    <a href="">
+      <div class="project-gran">
+        <img src="assets/no_photo.png">
+        <span>IDENTIDAD</span>
+        <h4>SUPER NOMBRE</h4>
+      </div>
+    </a>
+ 
 
+  </div>
+
+</section>
+<div class="divider"></div>
 
 
 <!-- CONTACTO -->
@@ -100,20 +164,18 @@
 
 
 
-<!-- JAVA SCRIPT -->
+  <!-- JAVA SCRIPT -->
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
 
-<script>
-  const slides = document.querySelectorAll(".slide");
-  let index = 0;
-
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 4000);  
-</script>
-
-<script>
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 4000);  
+  </script>
+  <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const images = document.querySelectorAll(".zoom-img");
@@ -139,16 +201,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-</script>
-
-<!----------------------------->
-
-
-<div id="lightbox" class="lightbox">
-  <span id="closeBtn">&times;</span>
-  <img id="lightbox-img">
-</div>
-
-
+  </script>
+  <!----------------------------->
+  <div id="lightbox" class="lightbox">
+    <span id="closeBtn">&times;</span>
+    <img id="lightbox-img">
+  </div>
 </body>
 </html>
