@@ -1,30 +1,13 @@
+/* TIPOGRAFIAS*/
+
 font-family: "forma-djr-display";
 font-family: "forma-djr-display", sans-serif;
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 28px;
-    text-align: right;
-  }
-
-  .hero-overlay {
-    padding: 30px;
-  }
-
-  .hero-slider {
-    height: 70vh;
-  }
-
-  .hero-tags {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+/*----------*/
 
 body {
   font-family: 'Poppins', sans-serif;
 }
-
 
 /* LIGHTBOX ZOOM IMAGEN*/
 
@@ -141,6 +124,7 @@ body {
 .nav {
   background: #0b0014;
   position: relative;
+  z-index: 9999;
 }
 
 .nav-content {
@@ -151,7 +135,7 @@ body {
 
 /* LOGO */
 .logo img {
-  height: 40px;
+  height: 50px;
   display: block;
 }
 
@@ -168,8 +152,11 @@ body {
 }
 
 /* CHECKBOX OCULTO */
+
 #menu-toggle {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ICONO */
@@ -206,8 +193,8 @@ body {
   .menu {
     flex-direction: column;
     align-items: center;
-    gap: 60px;
-    padding: 20px 0;
+    gap: 80px;
+    padding: 30px 20px;
   }
 
   /* 🔥 CLAVE (más estable) */
@@ -226,6 +213,51 @@ body {
 }
 
 
+/* TABLET */
+@media (max-width: 1200px) {
+
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+    z-index: 1001;
+  }
+
+  .menu-wrapper {
+    padding-top: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0b0014;
+    display: none;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 30px 20px;
+  }
+
+  /* 🔥 CLAVE (más estable) */
+  #menu-toggle:checked ~ .menu-wrapper {
+    display: block;
+  }
+
+  .menu a {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 700; 
+
+  }
+
+}
+
+
+
+
+/* -------- */
 
 
 
@@ -286,13 +318,12 @@ body {
   flex-direction: column;
   text-align: right;
   color: white;
-  padding: 60px 80px; /* ← más aire a la derecha */
+  padding: 60px 80px;
   z-index: 2;
-
 }
 
 .hero-title {
-  font-size: 52px;
+  font-size: 2px;
   font-weight: 900;
   max-width: 700px;
   margin-right: 15%;
@@ -345,20 +376,6 @@ body {
   opacity: 1;
 }
 
-/* OVERLAY */
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
-
 /* OSCURECER IMAGEN */
 .hero-slider::after {
   content: "";
@@ -372,10 +389,13 @@ body {
 }
 
 /* TEXTO */
+
 .hero-overlay h1 {
   font-size: 48px;
   font-weight: 900;
   max-width: 900px;
+  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 /* TAGS */
@@ -384,6 +404,8 @@ body {
 }
 
 
+
+/* ---------------- */
 
 
 
@@ -523,6 +545,7 @@ body {
 
 .project-main p {
   margin-left: 20px;
+  margin-right: 20px;
 
 }
 
@@ -656,6 +679,164 @@ a {
   .about-gallery {
     grid-template-columns: 1fr;
   }
+
+.hero-slider {
+    height: 65vh;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hero-title {
+    line-height: 1.2;
+    margin: 0;
+    max-width: 70%;
+  }
+
+  .hero-title h1 {
+    font-size: 20px;
+  }
+
+  .hero-tags {
+    bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .hero-tags span {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+
+
+h1 {
+    font-size: 40px;
+   line-height: 1.0;
+   margin-bottom: 10px;
+}
+
+h2 {
+   font-size: 15px;
+   letter-spacing: 2px;
+   line-height: 1.0;
+}
+
+h3 {
+    font-size: 25px;
+   font-weight: 700;   
+   line-height: 1.0;
+   margin-bottom: 10px;
+   
+}
+
+h4 {
+  font-size: 20px;
+   font-weight: 700;   
+   line-height: 1.0;
+   margin-top: 10px;
+   margin-bottom: 10px;  
+}
+
+
+p {
+  font-size: 15px;
+}
+
+/* HERO SLIDER */
+
+.hero-overlay h1 {
+  font-size: 30px;  
+  line-height: 1.0;
+  letter-spacing: 1px;
+}
+.hero-tags {
+  gap: 5px;
+}
+.hero-tags span {  
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 600; 
+  padding: 4px 14px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+
+/* PROJECTS */
+
+.project-main span {
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 600; 
+  padding: 4px 14px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+  float: right;
+  margin-right: 10px;
+}
+
+.project-grid span {
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 600; 
+  padding: 4px 14px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: black;
+  border-radius: 20px;
+  border: 1px solid black;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+
+/* CONTACT */
+
+.btn {  
+  max-width: 90%;
+}
+
+.btn span {
+  font-family: "forma-djr-display", sans-serif;
+    font-size: 15px;
+   font-weight: 600;   
+   line-height: 1.0;   
+   margin-left: 25px;
+   letter-spacing: 1px;
+}
+
+/* FOOTER */
+
+.footer img {
+  width: 130px;
+}
+
+.footer a {
+    color: white;
+  font-family: "forma-djr-display", sans-serif;
+  font-size: 12px; 
+   font-weight: 400;   
+   line-height: 1.0; 
+   letter-spacing: 1px;
+   margin-left: 15px;
+}
+
+
+
+
+
+
+
+
 }
 
 
@@ -667,68 +848,6 @@ a {
 
 }
 
-/* MÓVIL */
-@media (max-width: 768px) {
-  h1 {
-    font-family: "forma-djr-display", sans-serif;
-    font-size: 40px;
-   font-weight: 700;
-   text-align: center;
-   line-height: 1.0;
-  }
 
-h2 {
-    font-family: "forma-djr-display", sans-serif;
-    font-size: 20px;
-   font-weight: 500;
-   letter-spacing: 2px;
-   line-height: 1.0;
-   text-align: center;
-
-}
-
-h3 {
-    font-family: "forma-djr-display", sans-serif;
-    font-size: 40px;
-   font-weight: 700;   
-   line-height: 1.0;
-   margin-bottom: 10px;
-   
-}
-
-h4 {
-    font-family: "forma-djr-display", sans-serif;
-    font-size: 25px;
-   font-weight: 700;   
-   line-height: 1.0;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   
-}
-
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-}
-
-
-
-  .hero-title {
-    font-size: 15px;
-    line-height: 1.2;
-  }
-
-  .hero-overlay {
-    padding: 30px;
-  }
-
-  .hero-slider {
-    height: 70vh;
-  }
-
-
-
-}
 
 /* PROYECTOS */
