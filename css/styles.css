@@ -54,6 +54,7 @@ h1 {
     font-size: 50px;
    font-weight: 700;
    text-align: center;
+   margin-bottom: 20px;
 }
 
 h2 {
@@ -105,15 +106,15 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: auto;
   padding: 40px 20px;
 }
 
 
 .divider {
-  width: 90%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1500px;
   height: 2px;
   background-color: #000;
   margin: 20px auto;
@@ -134,12 +135,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 90px;
 }
 
 /* LOGO */
 .logo img {
   margin-bottom: -20px;
-  height: 50px;
+  height: 45px;
   display: block;
 }
 
@@ -152,7 +154,7 @@ body {
 .menu a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 25px;
 }
 
@@ -187,7 +189,7 @@ body {
   }
 
   .menu-wrapper {
-    padding-top: 20px;
+    padding-top: 10px;
     position: absolute;
     top: 100%;
     left: 0;
@@ -200,7 +202,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    padding: 30px 20px;
+    padding: 15px 15px;
   }
 
   /* 🔥 CLAVE (más estable) */
@@ -210,9 +212,9 @@ body {
 
   .menu a {
     padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "forma-djr-display", sans-serif;
-    font-weight: 700; 
+    font-weight: 500; 
 
   }
 
@@ -220,12 +222,13 @@ body {
 
 
 /* TABLET */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
 
   .menu-icon {
     display: block;
     margin-left: auto;
     z-index: 1001;
+    transition: transform 0.5s ease;
   }
 
   .menu-wrapper {
@@ -250,12 +253,12 @@ body {
     display: block;
   }
 
-  .menu a {
-    padding-bottom: 20px;
-    font-size: 20px;
+  .menu a {      
+    padding-bottom: 10px;
+    font-size: 15px;
     font-family: "forma-djr-display", sans-serif;
-    font-weight: 700; 
-
+    font-weight: 500; 
+    letter-spacing: 1.5px;
   }
 
 }
@@ -286,20 +289,20 @@ body {
 .slide {
   opacity: 0;
   transform: scale(1);
-  filter: blur(3px);
+  filter: blur(2px);
 
   transition: 
-    opacity 5s ease-out,
-    transform 5s ease,
-    filter 5s ease;
-}
+    opacity 6s ease-in,
+    transform 6s ease,
+    filter 6s ease;
+  }
 
 .slide.active {
   opacity: 1;
   transform: scale(1);
-  filter: blur(0);
+  filter: blur(0);    
 }
-}
+
 
 /* OSCURECER FONDO */
 
@@ -334,11 +337,10 @@ body {
 .hero-title {
   font-size: 2px;
   font-weight: 900;
-  max-width: 900px;
-  margin-right: 8%;
+  max-width: 1400px;
   line-height: 1.1;
   letter-spacing: -1px;
-  text-align: right !important;
+  text-align: right;
   margin-left: auto;
 }
 
@@ -437,7 +439,7 @@ body {
 }
 
 .about p {
-  max-width: 90%;
+  max-width: 80%;
   margin-bottom: 30px;
 }
 
@@ -449,7 +451,13 @@ body {
 
 .about-gallery img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 10px;  
+  transition: transform 0.5s ease;
+}
+
+.about-gallery img:hover {
+  transform: scale(1.02);
+  transition: 1s;
 }
 
 /* SERVICES */
@@ -477,10 +485,19 @@ body {
 }
 
 .card {
-    padding: 50px;
+  padding: 50px;
   background: #eee;
   border-radius: 10px;
+  transition: transform 0.5s ease;
 }
+
+  .card:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+  }
+
+
+
 
 .card.active {
   background: linear-gradient(135deg, #8a2be2, #c084fc);
@@ -619,9 +636,10 @@ a {
   color: white;
   padding: 20px;
   margin: 12px auto;
-  max-width: 100%;
+  max-width: 900px;
   border-radius: 30px;
   text-decoration: none;
+  transition: transform 0.5s ease
 }
 
 .btn-container {
@@ -635,10 +653,10 @@ a {
 .btn span, .btn-oscuro span {
   font-family: "forma-djr-display", sans-serif;
     font-size: 20px;
-   font-weight: 600;   
+   font-weight: 500;   
    line-height: 1.0;   
    margin-left: 25px;
-   letter-spacing: 1px;
+   letter-spacing: 1.5px;
 }
 
 .btn img, .btn-oscuro img {
@@ -669,10 +687,11 @@ a {
     color: white;
   font-family: "forma-djr-display", sans-serif;
   font-size: 15px; 
-   font-weight: 400;   
+   font-weight: 500;   
    line-height: 1.0; 
    letter-spacing: 1px;
-   margin-left: 15px;
+   margin-left: 35px;
+   margin-bottom: 20px;
 }
 
 .footer-content {
@@ -681,12 +700,12 @@ a {
 }
 
 .enlace-contanainer {
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 .divider-footer {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1500px;
   height: 1px;
   background-color: white;
   margin: 20px auto;
@@ -760,13 +779,13 @@ a {
   h1 {
     font-size: 40px;
    line-height: 1.0;
-   margin-bottom: 10px;
+   margin-bottom: 20px;
   }
 
   h2 {
    font-size: 15px;
    letter-spacing: 2px;
-   line-height: 1.0;
+   line-height: 1.2;
   }
 
   h3 {
@@ -845,9 +864,9 @@ a {
 
   /* CONTACT */
 
-  .btn, {
+  .btn {
     max-width: 90%;
-  }
+    }
 
   .btn span, .btn-oscuro span {
     font-family: "forma-djr-display", sans-serif;
@@ -861,18 +880,27 @@ a {
   /* FOOTER */
 
   .footer img {
-    width: 130px;
+    width: 160px;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
   }
 
   .footer a {
     color: white;
     font-family: "forma-djr-display", sans-serif;
-    font-size: 10px; 
+    font-size: 14px; 
     font-weight: 400;   
     line-height: 1.0; 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-left: 15px;
+    display: block;
   }
+
+ 
 
 }
 
@@ -930,7 +958,7 @@ a {
 /* CONTAINER */
 .project-intro container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -1187,6 +1215,10 @@ a {
   text-align: left;
   margin-bottom: 10px;
 }
+
+.service-about p {
+  max-width: 70%;
+}
 .service-info p {
   line-height: 1.6;
 }
@@ -1201,7 +1233,7 @@ a {
 
 .service-includes p {
   display: block;
-  max-width: 90%;
+  max-width: 70%;
 }
 .includes-intro {
   margin-bottom: 30px;
@@ -1294,10 +1326,15 @@ a {
   color: white;
   padding: 20px;
   margin: 12px auto;
-  max-width: 100%;
+  max-width: 900px;
   border-radius: 30px;
   text-decoration: none;
   background-color: #0b0014;
+  transition: transform 0.5s ease
+}
+
+.btn-oscuro:hover, .btn:hover {
+  transform: scale(1.02);
 }
 
 /* MOBILE */
